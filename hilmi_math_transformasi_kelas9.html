@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>HILMI MATH — Transformasi Geometri Kelas 9</title>
+<style>
+:root{--bg:#07111f;--panel:#101e33;--panel2:#142742;--blue:#4da3ff;--cyan:#6ee7f9;--text:#eef6ff;--muted:#a8bad0;--green:#48d597;--red:#ff7385;--line:#28415f}
+*{box-sizing:border-box}body{margin:0;background:radial-gradient(circle at 80% 0%,#12315a 0,transparent 32%),var(--bg);color:var(--text);font-family:Arial,Helvetica,sans-serif;line-height:1.55}
+.wrap{max-width:1050px;margin:auto;padding:20px}.hero{padding:28px 0 18px}.badge{display:inline-block;border:1px solid #35638c;background:#102c4b;color:var(--cyan);padding:5px 11px;border-radius:99px;font-size:.82rem}
+h1{font-size:clamp(2rem,6vw,3.5rem);line-height:1.08;margin:14px 0 10px;letter-spacing:-1px}h1 span{color:var(--cyan)}p{color:var(--muted);margin-top:5px}
+nav{display:flex;gap:8px;flex-wrap:wrap;margin:18px 0 24px}button,.tab{border:1px solid var(--line);background:#13243b;color:var(--text);padding:10px 14px;border-radius:12px;cursor:pointer;font-weight:700}button:hover,.tab.active{background:var(--blue);color:#061426;border-color:var(--blue)}.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:14px}.card,.box{background:linear-gradient(145deg,var(--panel),#0c192b);border:1px solid var(--line);border-radius:18px;padding:18px;margin-bottom:14px}.card h3{margin:4px 0 7px}.icon{font-size:1.8rem}.formula{display:block;background:#081625;border:1px solid #203b5b;border-radius:10px;padding:10px;color:var(--cyan);font-weight:700;margin:10px 0;overflow-wrap:anywhere}.muted{color:var(--muted)}.section{display:none}.section.active{display:block}.row{display:flex;gap:10px;flex-wrap:wrap;align-items:center}input,select{background:#081625;color:var(--text);border:1px solid #36516f;border-radius:10px;padding:11px;max-width:100%;width:130px}label{display:block;color:var(--muted);font-size:.9rem;margin:8px 0 4px}.primary{background:var(--blue);color:#061426;border:0}.result{margin-top:12px;border-radius:12px;padding:12px;background:#0b2b28;border:1px solid #246e5c;color:#b9ffe3;min-height:44px}.question{padding:15px;background:#0b1829;border:1px solid var(--line);border-radius:14px;margin:12px 0}.options{display:grid;gap:8px;margin-top:10px}.options button{text-align:left;font-weight:500}.correct{border-color:var(--green)!important;background:#10382f!important}.wrong{border-color:var(--red)!important;background:#3b1b2a!important}.score{font-size:1.2rem;font-weight:bold;color:var(--cyan)}footer{text-align:center;color:#8095ae;padding:30px 0 15px;font-size:.85rem}
+</style>
+</head>
+<body>
+<div class="wrap">
+<header class="hero">
+<span class="badge">MATEMATIKA SMP • KELAS 9</span>
+<h1>HILMI <span>MATH</span><br>Transformasi Geometri</h1>
+<p>Belajar translasi, refleksi, rotasi, dan dilatasi dengan ringkasan rumus, kalkulator titik, dan kuis latihan.</p>
+<nav>
+<button class="tab active" data-target="materi">📘 Materi</button>
+<button class="tab" data-target="kalkulator">🧮 Kalkulator</button>
+<button class="tab" data-target="kuis">🎯 Kuis</button>
+</nav>
+</header>
+
+<section id="materi" class="section active">
+<h2>Empat transformasi utama</h2>
+<div class="grid">
+<article class="card"><div class="icon">➡️</div><h3>1. Translasi</h3><p>Memindahkan titik sejauh tertentu tanpa mengubah bentuk, ukuran, atau arah.</p><span class="formula">(x, y) → (x + a, y + b)</span><p><b>Contoh:</b> A(2, 3) ditranslasi T(4, −1) menjadi A′(6, 2).</p></article>
+<article class="card"><div class="icon">🪞</div><h3>2. Refleksi</h3><p>Pencerminan titik terhadap garis tertentu.</p><span class="formula">Sumbu X: (x, y) → (x, −y)<br>Sumbu Y: (x, y) → (−x, y)<br>Titik O: (x, y) → (−x, −y)<br>Garis y = x: (x, y) → (y, x)</span></article>
+<article class="card"><div class="icon">🔄</div><h3>3. Rotasi</h3><p>Memutar titik terhadap pusat rotasi. Untuk pusat O(0,0):</p><span class="formula">90° berlawanan jarum jam: (x,y) → (−y,x)<br>180°: (x,y) → (−x,−y)<br>270° berlawanan jarum jam: (x,y) → (y,−x)</span><p>Rotasi searah jarum jam 90° sama dengan rotasi 270° berlawanan arah.</p></article>
+<article class="card"><div class="icon">🔍</div><h3>4. Dilatasi</h3><p>Memperbesar atau memperkecil dari pusat O(0,0) dengan faktor skala k.</p><span class="formula">(x, y) → (kx, ky)</span><p><b>Contoh:</b> B(−2, 3), k = 2 → B′(−4, 6).</p><p>Jika |k| &gt; 1 membesar; jika 0 &lt; |k| &lt; 1 mengecil.</p></article>
+</div>
+<div class="box"><h3>Tips mengingat</h3><p>• <b>Translasi:</b> tambah atau kurangi koordinat. • <b>Refleksi:</b> koordinat berubah tanda sesuai garis cermin. • <b>Rotasi:</b> posisi x dan y dapat bertukar. • <b>Dilatasi:</b> kalikan koordinat dengan faktor skala.</p><p class="muted">Catatan: rumus rotasi dan dilatasi di atas menggunakan pusat O(0,0), kecuali dinyatakan lain.</p></div>
+</section>
+
+<section id="kalkulator" class="section">
+<div class="box">
+<h2>Kalkulator transformasi titik</h2>
+<p>Masukkan titik awal P(x, y), lalu pilih transformasi untuk melihat koordinat bayangannya.</p>
+<div class="row">
+<div><label for="x">Koordinat x</label><input id="x" type="number" value="2"></div>
+<div><label for="y">Koordinat y</label><input id="y" type="number" value="3"></div>
+<div><label for="jenis">Transformasi</label><select id="jenis"><option value="translasi">Translasi</option><option value="x">Refleksi sumbu X</option><option value="y">Refleksi sumbu Y</option><option value="o">Refleksi titik O</option><option value="yx">Refleksi garis y = x</option><option value="r90">Rotasi 90° berlawanan jarum jam</option><option value="r180">Rotasi 180°</option><option value="r270">Rotasi 270° berlawanan jarum jam</option><option value="dilatasi">Dilatasi pusat O</option></select></div>
+</div>
+<div class="row" id="parameter">
+<div><label for="a">Nilai a (translasi x)</label><input id="a" type="number" value="4"></div>
+<div><label for="b">Nilai b (translasi y)</label><input id="b" type="number" value="-1"></div>
+</div>
+<div class="row" id="scale" style="display:none"><div><label for="k">Faktor skala k</label><input id="k" type="number" value="2" step="any"></div></div>
+<button class="primary" id="hitung" style="margin-top:14px">Hitung bayangan</button>
+<div class="result" id="hasil" aria-live="polite">P(2, 3) → P′(6, 2)</div>
+</div>
+</section>
+
+<section id="kuis" class="section">
+<div class="box"><h2>Kuis latihan</h2><p>Jawab 8 soal untuk menguji pemahamanmu. Pilih satu jawaban pada setiap soal.</p><div class="score" id="score">Skor: 0 / 8</div><div id="questions"></div><button class="primary" id="ulang">Ulangi kuis</button></div>
+</section>
+<footer>HILMI MATH • Belajar sedikit demi sedikit, pasti bisa ✦</footer>
+</div>
+<script>
+document.querySelectorAll('.tab').forEach(b=>b.addEventListener('click',()=>{document.querySelectorAll('.tab').forEach(x=>x.classList.remove('active'));document.querySelectorAll('.section').forEach(x=>x.classList.remove('active'));b.classList.add('active');document.getElementById(b.dataset.target).classList.add('active')}));
+const jenis=document.getElementById('jenis');
+jenis.addEventListener('change',()=>{document.getElementById('parameter').style.display=jenis.value==='translasi'?'flex':'none';document.getElementById('scale').style.display=jenis.value==='dilatasi'?'flex':'none'});
+document.getElementById('hitung').addEventListener('click',()=>{let x=Number(document.getElementById('x').value),y=Number(document.getElementById('y').value),a=Number(document.getElementById('a').value),b=Number(document.getElementById('b').value),k=Number(document.getElementById('k').value),X=x,Y=y;switch(jenis.value){case'translasi':X=x+a;Y=y+b;break;case'x':Y=-y;break;case'y':X=-x;break;case'o':X=-x;Y=-y;break;case'yx':X=y;Y=x;break;case'r90':X=-y;Y=x;break;case'r180':X=-x;Y=-y;break;case'r270':X=y;Y=-x;break;case'dilatasi':X=k*x;Y=k*y;break;}const fmt=n=>Number.isInteger(n)?n:Number(n.toFixed(4));document.getElementById('hasil').textContent=`P(${fmt(x)}, ${fmt(y)}) → P′(${fmt(X)}, ${fmt(Y)})`;});
+const qs=[
+{q:"Titik A(2, 3) ditranslasi T(4, −1). Koordinat A′ adalah …",o:["(6, 2)","(−2, 4)","(6, 4)","(−6, 2)"],a:0,e:"Tambahkan komponen translasi: (2+4, 3−1) = (6, 2)."},
+{q:"Bayangan titik B(−3, 5) oleh refleksi terhadap sumbu X adalah …",o:["(3, 5)","(−3, −5)","(3, −5)","(5, −3)"],a:1,e:"Refleksi sumbu X mengubah (x,y) menjadi (x,−y)."},
+{q:"Bayangan titik C(4, −2) terhadap sumbu Y adalah …",o:["(4, 2)","(−4, −2)","(−4, 2)","(−2, 4)"],a:1,e:"Refleksi sumbu Y mengubah (x,y) menjadi (−x,y)."},
+{q:"Titik D(2, 5) dirotasi 90° berlawanan arah jarum jam dengan pusat O. Hasilnya …",o:["(5, −2)","(−2, 5)","(−5, 2)","(2, −5)"],a:2,e:"Rotasi 90° berlawanan arah jarum jam: (x,y) → (−y,x), jadi (−5,2)."},
+{q:"Bayangan E(−1, 4) oleh rotasi 180° berpusat di O adalah …",o:["(1, −4)","(4, −1)","(−4, 1)","(−1, −4)"],a:0,e:"Rotasi 180°: (x,y) → (−x,−y), jadi (1,−4)."},
+{q:"Titik F(3, −2) didilatasi berpusat O dengan faktor skala 3. Hasilnya …",o:["(6, −5)","(9, −6)","(1, −6)","(9, 6)"],a:1,e:"Kalikan kedua koordinat dengan 3: (9,−6)."},
+{q:"Jika titik G(6, 8) didilatasi berpusat O dengan k = 1/2, bayangannya …",o:["(12, 16)","(3, 4)","(6, 4)","(−3, −4)"],a:1,e:"Kalikan tiap koordinat dengan 1/2: (3,4)."},
+{q:"Refleksi terhadap garis y = x mengubah titik H(−2, 7) menjadi …",o:["(2, −7)","(−2, −7)","(7, −2)","(−7, 2)"],a:2,e:"Refleksi pada y=x menukar posisi koordinat: (x,y) → (y,x)."}
+];
+let answers={};function renderQuiz(){answers={};const root=document.getElementById('questions');root.innerHTML='';qs.forEach((q,i)=>{let d=document.createElement('div');d.className='question';d.innerHTML=`<b>${i+1}. ${q.q}</b><div class="options">${q.o.map((o,j)=>`<button data-i="${i}" data-j="${j}">${String.fromCharCode(65+j)}. ${o}</button>`).join('')}</div><div class="muted" id="exp${i}" style="display:none;margin-top:9px"></div>`;root.appendChild(d)});root.querySelectorAll('button').forEach(b=>b.addEventListener('click',()=>{let i=+b.dataset.i,j=+b.dataset.j;answers[i]=j;let all=root.querySelectorAll(`button[data-i="${i}"]`);all.forEach(x=>{x.classList.remove('correct','wrong');x.disabled=true});all[qs[i].a].classList.add('correct');if(j!==qs[i].a)b.classList.add('wrong');document.getElementById('exp'+i).textContent='Pembahasan: '+qs[i].e;document.getElementById('exp'+i).style.display='block';updateScore()}));updateScore()}
+function updateScore(){let score=Object.entries(answers).filter(([i,a])=>qs[+i].a===a).length;document.getElementById('score').textContent=`Skor: ${score} / 8${Object.keys(answers).length===8?(score>=7?' — Hebat!':score>=5?' — Bagus, terus berlatih!':' — Ayo pelajari lagi rumusnya!'):''}`}
+document.getElementById('ulang').addEventListener('click',renderQuiz);renderQuiz();
+</script>
+</body>
+</html>
